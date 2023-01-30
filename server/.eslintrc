@@ -1,0 +1,36 @@
+{
+	"root": true,
+	"extends": ["airbnb-base", "airbnb-typescript/base", "prettier"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint"],
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"rules": {
+				"@typescript-eslint/no-shadow": "error",
+				"@typescript-eslint/lines-between-class-members": [
+					"error",
+					"always",
+					{
+						"exceptAfterSingleLine": true
+					}
+				],
+				"import/prefer-default-export": "off",
+				"no-shadow": "off",
+				"no-undef": "off",
+				"no-console": "off",
+				"class-methods-use-this": "off",
+				"lines-between-class-members": "off"
+			}
+		},
+		{
+			"files": ["catwiki-service.ts"],
+			"rules": {
+				"@typescript-eslint/naming-convention": "off"
+			}
+		}
+	]
+}
