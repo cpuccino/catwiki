@@ -3,9 +3,10 @@
 ## TODO
 
 - [ ] Client
+
   - [x] Repo setup
-  - [ ] Linters
-  - [ ] Formatter
+  - [x] Linters
+  - [x] Formatter
   - [ ] Home Page
     - [ ] Banner
     - [ ] Search - fetch breeds data (use query api or might need to prefetch)
@@ -28,8 +29,8 @@
 
 - [ ] Server
   - [x] Repo setup
-  - [ ] Linters
-  - [ ] Formatting
+  - [x] Linters
+  - [x] Formatter
   - [ ] Controllers
     - [ ] Catwiki controller
       - [ ] GET/ breeds/:breed
@@ -41,12 +42,17 @@
       - [ ] Fetch & transform image data
   - [ ] Routing
     - [ ] Catwiki
-  - [ ] Cors
-  - [ ] Logging
-  - [ ] Environment variables
+  - [x] Cors
+  - [x] Logging
+  - [x] Environment variables
   - [ ] Caching
   - [ ] Deployment
     - [ ] Container
     - [ ] Compose
     - [ ] Reverse Proxy
     - [ ] SSL
+
+## Potential issues
+
+- Secrets stored in .env could be accessed in the image.
+  Ideally it should be stored in a secrets manager (Secrets Manager, Parameter Store etc)

@@ -1,10 +1,19 @@
+import dotenv from "dotenv";
+
 import express, { json, urlencoded } from "express";
 import cors from "cors";
 import morgan from "morgan";
 
+import { getCatWikiApiKey, getPort, validateEnvironmentVariables } from "./utilities/environment";
+
 const main = () => {
+	dotenv.config();
+	validateEnvironmentVariables();
+
 	const app = express();
-	const port = 5000;
+
+	const port = getPort();
+	console.log(getPort(), getCatWikiApiKey());
 
 	app.use(cors());
 	app.use(json());
