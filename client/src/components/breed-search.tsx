@@ -16,7 +16,7 @@ const BreedSearch: FC = () => {
 	};
 
 	const renderPopup = (breeds: CatBreed[]) => {
-		const matches = breeds.filter(breed => breed.name.includes(value));
+		const matches = breeds.filter(breed => breed.name.toLowerCase().includes(value.toLowerCase()));
 
 		if (!matches.length) {
 			return <div className="c-breed-search__popup-empty is-size-4">No results found</div>;
