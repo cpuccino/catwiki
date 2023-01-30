@@ -1,0 +1,8 @@
+.c-footer {
+	color: $color-white;
+	background: $color-black;
+	padding: 1.5rem map-get($gutters, xxsmall);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
