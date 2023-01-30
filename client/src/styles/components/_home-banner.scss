@@ -1,0 +1,27 @@
+.c-home-banner {
+	display: flex;
+	color: $color-white;
+	background: $color-black;
+	padding: map-get($gutters, xxsmall);
+	position: relative;
+	align-items: center;
+	min-height: 17rem;
+
+	&__content {
+		max-width: 15rem;
+		z-index: $z-index-content;
+	}
+
+	&__heading {
+		margin-bottom: 0.5rem;
+		font-size: 2.5rem;
+	}
+
+	&__background {
+		@include background();
+	}
+
+	.c-breed-search {
+		margin-top: 1.5rem;
+	}
+}
