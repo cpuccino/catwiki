@@ -67,7 +67,8 @@ export class CatWikiService {
 			intelligence,
 			health_issues,
 			social_needs,
-			stranger_friendly
+			stranger_friendly,
+			image
 		} = response;
 
 		return {
@@ -86,7 +87,8 @@ export class CatWikiService {
 				healthIssues: health_issues,
 				socialNeeds: social_needs,
 				strangerFriendly: stranger_friendly
-			}
+			},
+			image: image?.url
 		};
 	};
 }
@@ -98,9 +100,9 @@ type CatWikiApiGetBreedResponseData = {
 	};
 	id: string;
 	name: string;
-	cfa_url: string;
-	vetstreet_url: string;
-	vcahospitals_url: string;
+	cfa_url?: string;
+	vetstreet_url?: string;
+	vcahospitals_url?: string;
 	temperament: string;
 	origin: string;
 	country_codes: string;
@@ -108,8 +110,8 @@ type CatWikiApiGetBreedResponseData = {
 	description: string;
 	life_span: string;
 	indoor: number;
-	lap: number;
-	alt_names: string;
+	lap?: number;
+	alt_names?: string;
 	adaptability: number;
 	affection_level: number;
 	child_friendly: number;
@@ -129,9 +131,17 @@ type CatWikiApiGetBreedResponseData = {
 	rex: number;
 	suppressed_tail: number;
 	short_legs: number;
-	wikipedia_url: string;
+	wikipedia_url?: string;
 	hypoallergenic: number;
-	reference_image_id: string;
+	reference_image_id?: string;
+	image?: {
+		id: string;
+		width: number;
+		height: number;
+		url: string;
+	};
+	cat_friendly?: number;
+	bidability?: number;
 };
 
 type CatWikiApiGetBreedsResponseData = CatWikiApiGetBreedResponseData[];
@@ -161,6 +171,7 @@ export type CatBreed = {
 		socialNeeds: number;
 		strangerFriendly: number;
 	};
+	image?: string;
 };
 
 export type CatImage = {
