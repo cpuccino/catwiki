@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext"],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"useDefineForClassFields": true,
+		"removeComments": true,
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"outDir": "./dist"
+	},
+	"include": ["**/*.ts"],
+	"exclude": ["node_modules"]
+}

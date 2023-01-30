@@ -3,7 +3,7 @@
 ## TODO
 
 - [ ] Client
-  - [ ] Repo setup
+  - [x] Repo setup
   - [ ] Linters
   - [ ] Formatter
   - [ ] Home Page
@@ -27,7 +27,7 @@
     - [ ] SSR
 
 - [ ] Server
-  - [ ] Repo setup
+  - [x] Repo setup
   - [ ] Linters
   - [ ] Formatting
   - [ ] Controllers
