@@ -27,6 +27,12 @@
 					}
 				]
 			}
+		},
+		{
+			"files": ["src/pages/_app.tsx"],
+			"rules": {
+				"react/jsx-props-no-spreading": "off"
+			}
 		}
 	]
 }
