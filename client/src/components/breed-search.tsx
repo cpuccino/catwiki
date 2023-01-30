@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { ChangeEvent, FC, useState } from "react";
 
 import { FaTimes } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { catBreedMock } from "src/mock/cat-breed";
 
 const BreedSearch: FC = () => {
 	const [value, setValue] = useState("");
+	const router = useRouter();
 
 	const handleOnEmptyClick = () => {
 		setValue("");
@@ -13,6 +15,10 @@ const BreedSearch: FC = () => {
 
 	const handleOnInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		setValue(event.currentTarget.value);
+	};
+
+	const handleOnBreedClick = (breedId: string) => {
+		router.push(`/breeds/${breedId}`);
 	};
 
 	const renderPopup = (breeds: CatBreed[]) => {
@@ -23,7 +29,11 @@ const BreedSearch: FC = () => {
 		}
 
 		return matches.map(breed => (
-			<div key={breed.name} className="c-breed-search__popup-item is-size-4">
+			<div
+				key={breed.name}
+				className="c-breed-search__popup-item is-size-4"
+				onClick={() => handleOnBreedClick(breed.id)}
+			>
 				{breed.name}
 			</div>
 		));
