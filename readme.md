@@ -12,18 +12,24 @@
     - [x] Typography
     - [x] Colors
     - [x] Utilities
-  - [ ] Home Page
-    - [ ] Banner
-    - [ ] Search - fetch breeds data (use query api or might need to prefetch)
-    - [ ] Discover - fetch breeds data with images
-    - [ ] Promotion
+  - [x] Home Page
+    - [x] Banner
+    - [x] Search - fetch breeds data (use query api or might need to prefetch)
+    - [x] Discover - fetch breeds data with images
+    - [x] Promotion
   - [ ] Breed Page
     - [ ] Info - fetch breed data
     - [ ] Gallery - fetch breed images
   - [ ] 404 Page
   - [ ] Loader
   - [ ] Header
-  - [ ] Footer
+  - [x] Footer
+  - [ ] Responsiveness
+    - [ ] base
+    - [ ] xsmall
+    - [ ] medium
+    - [ ] large
+    - [ ] xlarge
   - [ ] Deployment
     - [ ] Container
     - [ ] Compose
