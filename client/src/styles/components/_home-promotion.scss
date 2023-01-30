@@ -1,0 +1,35 @@
+.c-home-promotion {
+	display: flex;
+	flex-direction: column;
+	color: $color-black;
+	background: $color-white;
+	padding: 4rem map-get($gutters, xxsmall);
+
+	&__left {
+		max-width: 80%;
+		margin-bottom: 2rem;
+	}
+
+	&__read-more:after {
+		background: $color-red;
+	}
+
+	&__title {
+		margin-bottom: 1.5rem;
+		position: relative;
+
+		&:after {
+			content: "";
+			top: -0.7rem;
+			left: 0;
+			width: 2.3rem;
+			height: 0.125rem;
+			position: absolute;
+			background-color: $color-red;
+		}
+	}
+
+	&__excerpt {
+		margin-bottom: 1.5rem;
+	}
+}
