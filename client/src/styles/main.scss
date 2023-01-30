@@ -1,7 +1,16 @@
 @import "settings/color";
 @import "settings/font";
+@import "settings/z-index";
 
 @import "utilities/responsive";
+@import "utilities/gutter";
+@import "utilities/layout";
 
 @import "base/reset";
 @import "base/typography";
+
+@import "components/breed-search";
+@import "components/home-banner";
+@import "components/home-discover";
+@import "components/home-promotion";
+@import "components/footer";

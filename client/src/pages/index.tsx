@@ -1,13 +1,21 @@
 import Head from "next/head";
 import { FC } from "react";
 
+import HomeBanner from "src/components/home-banner";
+import HomeDiscover from "src/components/home-discover";
+import HomePromotion from "src/components/home-promotion";
+import Footer from "src/components/footer";
+
 const Index: FC = () => {
 	return (
 		<div>
 			<Head>
 				<title>Home</title>
 			</Head>
-			<div className="is-size-1">Hello world! - client</div>
+			<HomeBanner />
+			<HomeDiscover />
+			<HomePromotion />
+			<Footer />
 		</div>
 	);
 };
