@@ -1,1 +1,52 @@
 # Catwiki
+
+## TODO
+
+- [ ] Client
+  - [ ] Repo setup
+  - [ ] Linters
+  - [ ] Formatter
+  - [ ] Home Page
+    - [ ] Banner
+    - [ ] Search - fetch breeds data (use query api or might need to prefetch)
+    - [ ] Discover - fetch breeds data with images
+    - [ ] Promotion
+  - [ ] Breed Page
+    - [ ] Info - fetch breed data
+    - [ ] Gallery - fetch breed images
+  - [ ] 404 Page
+  - [ ] Loader
+  - [ ] Header
+  - [ ] Footer
+  - [ ] Deployment
+    - [ ] Container
+    - [ ] Compose
+    - [ ] Reverse Proxy
+    - [ ] SSL
+  - [ ] Optimization
+    - [ ] SSR
+
+- [ ] Server
+  - [ ] Repo setup
+  - [ ] Linters
+  - [ ] Formatting
+  - [ ] Controllers
+    - [ ] Catwiki controller
+      - [ ] GET/ breeds/:breed
+      - [ ] GET/ breeds
+      - [ ] GET/ images
+  - [ ] Services
+    - [ ] Catwiki service
+      - [ ] Fetch & transform breed data
+      - [ ] Fetch & transform image data
+  - [ ] Routing
+    - [ ] Catwiki
+  - [ ] Cors
+  - [ ] Logging
+  - [ ] Environment variables
+  - [ ] Caching
+  - [ ] Deployment
+    - [ ] Container
+    - [ ] Compose
+    - [ ] Reverse Proxy
+    - [ ] SSL
