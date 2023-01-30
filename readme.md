@@ -31,17 +31,17 @@
   - [x] Repo setup
   - [x] Linters
   - [x] Formatter
-  - [ ] Controllers
-    - [ ] Catwiki controller
-      - [ ] GET/ breeds/:breed
-      - [ ] GET/ breeds
-      - [ ] GET/ images
-  - [ ] Services
-    - [ ] Catwiki service
-      - [ ] Fetch & transform breed data
-      - [ ] Fetch & transform image data
-  - [ ] Routing
-    - [ ] Catwiki
+  - [x] Controllers
+    - [x] Catwiki controller
+      - [x] GET/ breeds/:breed
+      - [x] GET/ breeds
+      - [x] GET/ images
+  - [x] Services
+    - [x] Catwiki service
+      - [x] Fetch & transform breed data
+      - [x] Fetch & transform image data
+  - [x] Routing
+    - [x] Catwiki
   - [x] Cors
   - [x] Logging
   - [x] Environment variables
