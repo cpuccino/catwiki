@@ -7,6 +7,11 @@
   - [x] Repo setup
   - [x] Linters
   - [x] Formatter
+  - [x] Base styles
+    - [x] Reset
+    - [x] Typography
+    - [x] Colors
+    - [x] Utilities
   - [ ] Home Page
     - [ ] Banner
     - [ ] Search - fetch breeds data (use query api or might need to prefetch)
