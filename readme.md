@@ -1,5 +1,36 @@
 # Catwiki
 
+## Requirements
+
+- NVM (Node Version Manager)
+- Docker
+
+## Development
+
+- Run `nvm use` to ensure proper node version is used
+- Configure .env for client
+
+```
+@client/.env
+
+NEXT_PUBLIC_API_URL=http://localhost:serverport
+```
+
+- Configure .env for server
+
+```
+@server/.env
+
+CATWIKI_API_KEY=api_key
+```
+
+- Run `yarn dev` on both client and server
+
+## Deployment
+
+- Configure .env on both client and server
+- Run `docker compose up -d`
+
 ## TODO
 
 - [ ] Client
@@ -30,9 +61,10 @@
     - [ ] medium
     - [ ] large
     - [ ] xlarge
+  - [ ] Replace mocks with real api calls
   - [ ] Deployment
-    - [ ] Container
-    - [ ] Compose
+    - [x] Container
+    - [x] Compose
     - [ ] Reverse Proxy
     - [ ] SSL
   - [ ] Optimization
@@ -58,12 +90,12 @@
   - [x] Environment variables
   - [ ] Caching
   - [ ] Deployment
-    - [ ] Container
-    - [ ] Compose
+    - [x] Container
+    - [x] Compose
     - [ ] Reverse Proxy
     - [ ] SSL
 
 ## Potential issues
 
 - Secrets stored in .env could be accessed in the image.
-  Ideally it should be stored in a secrets manager (Secrets Manager, Parameter Store etc)
+  Ideally it should be stored in a secrets manager service (Secrets Manager, Parameter Store etc)

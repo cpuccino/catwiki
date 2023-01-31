@@ -1,0 +1,21 @@
+FROM node:18.13.0-alpine
+
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+COPY tsconfig.json package.json yarn.lock .env /app/
+COPY src /app/src/
+COPY public /app/public
+
+RUN yarn --frozen-lockfile \
+  && yarn next telemetry disable \
+  && yarn build
+
+ENV NODE_ENV production
+ENV PORT 3000
+EXPOSE 3000
+
+USER node
+
+CMD ["yarn", "start"]
