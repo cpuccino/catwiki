@@ -10,7 +10,7 @@ const HomePromotion: FC = () => (
 				which lower your stress and anxiety levels
 			</p>
 			<Link className="c-home-promotion__read-more" href="/">
-				Read more ⟶
+				READ MORE ⟶
 			</Link>
 		</div>
 		<div className="c-home-promotion__right">

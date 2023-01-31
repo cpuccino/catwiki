@@ -17,17 +17,17 @@ const HomeDiscover: FC<Props> = props => {
 			<div className="c-home-discover__excerpt">
 				<h2 className="c-home-discover__upsell is-size-1">66+ Breeds for you to discover</h2>
 				<Link className="c-home-discover__see-more" href="/">
-					See more ⟶
+					SEE MORE ⟶
 				</Link>
 			</div>
 			<div className="c-home-discover__exhibition">
 				{breeds.slice(0, MAX_IMAGE_COUNT).map(breed => (
-					<div className="c-home-discover__breed" key={breed.id}>
+					<Link className="c-home-discover__breed" key={breed.id} href={`/breeds/${breed.id}`}>
 						<div className="c-home-discover__breed-image">
 							<img src={breed.image} alt={breed.name} />
 						</div>
 						<span>{breed.name}</span>
-					</div>
+					</Link>
 				))}
 			</div>
 		</div>
