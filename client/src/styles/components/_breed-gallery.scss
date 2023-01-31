@@ -70,7 +70,7 @@
 	}
 
 	@include media(large) {
-		padding: 10rem map-get($gutters, large) 5rem;
+		padding: 10rem map-get($gutters, large) 8rem;
 
 		&__title {
 			margin-bottom: 3rem;

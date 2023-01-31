@@ -14,10 +14,7 @@ const HomePromotion: FC = () => (
 			</Link>
 		</div>
 		<div className="c-home-promotion__right">
-			<img
-				src="https://images.unsplash.com/photo-1490650034439-fd184c3c86a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-				alt=""
-			/>
+			<img src="/assets/images/home-promotion.webp" alt="" />
 		</div>
 	</div>
 );
