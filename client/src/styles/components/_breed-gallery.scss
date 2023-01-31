@@ -1,0 +1,38 @@
+.c-breed-gallery {
+	display: flex;
+	flex-direction: column;
+	padding: map-get($gutters, xxsmall);
+
+	&__title {
+		margin-bottom: 1rem;
+	}
+
+	&__exhibition {
+		display: flex;
+		overflow-x: auto;
+	}
+
+	&__breed {
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.625rem;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&-image {
+			width: 10rem;
+			height: 10rem;
+			border-radius: 0.625rem;
+			overflow: hidden;
+			margin-bottom: 0.5rem;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
