@@ -17,7 +17,7 @@ const Breed: FC = () => {
 	const { id } = router.query;
 
 	const fetchBreed = useCallback(async () => {
-		setBreed(catBreedMock.find(breed => breed.id === id));
+		setBreed(catBreedMock.find(data => data.id === id));
 	}, [id]);
 
 	const fetchImages = useCallback(async () => {
