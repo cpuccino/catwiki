@@ -9,8 +9,14 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "components/logo";
 @import "components/breed-search";
 @import "components/home-banner";
 @import "components/home-discover";
 @import "components/home-promotion";
+
+@import "components/breed-detail";
+@import "components/breed-gallery";
+
+@import "components/header";
 @import "components/footer";
