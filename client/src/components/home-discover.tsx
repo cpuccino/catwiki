@@ -1,11 +1,17 @@
 import Link from "next/link";
 import { FC } from "react";
-
-import { catBreedMock } from "../mock/cat-breed";
+import { CatBreed } from "../api/catwiki";
 
 const MAX_IMAGE_COUNT = 4;
 
-const HomeDiscover: FC = () => (
+type Props = {
+	breeds: CatBreed[];
+};
+
+const HomeDiscover: FC<Props> = props => {
+	const { breeds } = props;
+
+	return (
 		<div className="c-home-discover">
 			<span className="c-home-discover__heading">Most searched breeds</span>
 			<div className="c-home-discover__excerpt">
@@ -15,7 +21,7 @@ const HomeDiscover: FC = () => (
 				</Link>
 			</div>
 			<div className="c-home-discover__exhibition">
-				{catBreedMock.slice(0, MAX_IMAGE_COUNT).map(breed => (
+				{breeds.slice(0, MAX_IMAGE_COUNT).map(breed => (
 					<div className="c-home-discover__breed" key={breed.id}>
 						<div className="c-home-discover__breed-image">
 							<img src={breed.image} alt={breed.name} />
@@ -26,5 +32,6 @@ const HomeDiscover: FC = () => (
 			</div>
 		</div>
 	);
+};
 
 export default HomeDiscover;

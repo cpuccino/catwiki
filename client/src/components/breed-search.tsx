@@ -3,9 +3,14 @@ import { ChangeEvent, FC, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 
 import { CatBreed } from "../api/catwiki";
-import { catBreedMock } from "../mock/cat-breed";
 
-const BreedSearch: FC = () => {
+type Props = {
+	breeds: CatBreed[];
+};
+
+const BreedSearch: FC<Props> = props => {
+	const { breeds } = props;
+
 	const [value, setValue] = useState("");
 	const router = useRouter();
 
@@ -50,7 +55,7 @@ const BreedSearch: FC = () => {
 			<div className="c-breed-search__empty" onClick={handleOnEmptyClick}>
 				<FaTimes />
 			</div>
-			{value && <div className="c-breed-search__popup">{renderPopup(catBreedMock)}</div>}
+			{value && <div className="c-breed-search__popup">{renderPopup(breeds)}</div>}
 		</div>
 	);
 };
