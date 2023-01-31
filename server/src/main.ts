@@ -4,7 +4,7 @@ import express, { json, urlencoded } from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-import { getCatWikiApiKey, getPort, validateEnvironmentVariables } from "./utilities/environment";
+import { getPort, validateEnvironmentVariables } from "./utilities/environment";
 import { catWikiRouter } from "./routes/catwiki";
 
 const main = () => {

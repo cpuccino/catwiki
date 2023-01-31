@@ -27,7 +27,7 @@
 			}
 		},
 		{
-			"files": ["catwiki-service.ts"],
+			"files": ["catwiki.ts"],
 			"rules": {
 				"@typescript-eslint/naming-convention": "off"
 			}
