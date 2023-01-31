@@ -48,7 +48,7 @@ CATWIKI_API_KEY=api_key
     - [x] Search - fetch breeds data (use query api or might need to prefetch)
     - [x] Discover - fetch breeds data with images
     - [x] Promotion
-  - [ ] Breed Page
+  - [x] Breed Page
     - [x] Info - fetch breed data
     - [x] Gallery - fetch breed images
   - [ ] 404 Page
@@ -61,7 +61,7 @@ CATWIKI_API_KEY=api_key
     - [x] medium (tablet)
     - [x] large (desktop)
     - [x] xlarge (desktop)
-  - [ ] Replace mocks with real api calls
+  - [x] Replace mocks with real api calls
   - [ ] Deployment
     - [x] Container
     - [x] Compose
@@ -85,6 +85,7 @@ CATWIKI_API_KEY=api_key
       - [x] Fetch & transform image data
   - [x] Routing
     - [x] Catwiki
+  - [x] Tests (BDD)
   - [x] Cors
   - [x] Logging
   - [x] Environment variables

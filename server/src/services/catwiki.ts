@@ -95,7 +95,7 @@ export class CatWikiService {
 	};
 }
 
-type CatWikiApiGetBreedResponseData = {
+export type CatWikiApiGetBreedResponseData = {
 	weight: {
 		imperial: string;
 		metric: string;
@@ -146,9 +146,9 @@ type CatWikiApiGetBreedResponseData = {
 	bidability?: number;
 };
 
-type CatWikiApiGetBreedsResponseData = CatWikiApiGetBreedResponseData[];
+export type CatWikiApiGetBreedsResponseData = CatWikiApiGetBreedResponseData[];
 
-type CatWikiApiGetImagesResponseData = {
+export type CatWikiApiGetImagesResponseData = {
 	id: string;
 	url: string;
 	width: number;
