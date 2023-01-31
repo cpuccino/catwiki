@@ -18,14 +18,14 @@
     - [x] Discover - fetch breeds data with images
     - [x] Promotion
   - [ ] Breed Page
-    - [ ] Info - fetch breed data
-    - [ ] Gallery - fetch breed images
+    - [x] Info - fetch breed data
+    - [x] Gallery - fetch breed images
   - [ ] 404 Page
   - [ ] Loader
-  - [ ] Header
+  - [x] Header
   - [x] Footer
   - [ ] Responsiveness
-    - [ ] base
+    - [x] base
     - [ ] xsmall
     - [ ] medium
     - [ ] large
