@@ -7,15 +7,15 @@ import HomePromotion from "src/components/home-promotion";
 import Footer from "src/components/footer";
 
 const Index: FC = () => (
-		<div>
-			<Head>
-				<title>Home</title>
-			</Head>
-			<HomeBanner />
-			<HomeDiscover />
-			<HomePromotion />
-			<Footer />
-		</div>
-	);
+	<div>
+		<Head>
+			<title>Home</title>
+		</Head>
+		<HomeBanner />
+		<HomeDiscover />
+		<HomePromotion />
+		<Footer />
+	</div>
+);
 
 export default Index;

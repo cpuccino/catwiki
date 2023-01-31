@@ -13,11 +13,11 @@ const BreedGallery: FC<Props> = props => {
 
 	return (
 		<div className="c-breed-gallery">
-			<h2 className="c-breed-gallery__title">Other photos</h2>
+			<h2 className="c-breed-gallery__title is-size-1">Other photos</h2>
 
 			<div className="c-breed-gallery__exhibition">
 				{breedImages.slice(0, MAX_IMAGE_COUNT).map(image => (
-					<div className="c-breed-gallery__breed">
+					<div key={image.id} className="c-breed-gallery__breed">
 						<div className="c-breed-gallery__breed-image">
 							<img src={image.url} alt={image.breedName} />
 						</div>

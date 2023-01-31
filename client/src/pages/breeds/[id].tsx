@@ -5,9 +5,9 @@ import { FC, useState, useCallback, useEffect } from "react";
 import BreedDetail from "src/components/breed-detail";
 import BreedGallery from "src/components/breed-gallery";
 import Footer from "src/components/footer";
+import Header from "src/components/header";
 import { CatBreed, CatImage } from "src/api/catwiki";
 import { catBreedMock, catImagesMock } from "src/mock/cat-breed";
-import Header from "src/components/header";
 
 const Breed: FC = () => {
 	const [breed, setBreed] = useState<CatBreed>();
@@ -28,8 +28,6 @@ const Breed: FC = () => {
 		fetchBreed();
 		fetchImages();
 	}, [fetchBreed, fetchImages]);
-
-	console.log(id);
 
 	return (
 		<div>

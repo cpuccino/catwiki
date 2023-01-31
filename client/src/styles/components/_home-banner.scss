@@ -8,7 +8,7 @@
 	min-height: 17rem;
 
 	&__content {
-		max-width: 15rem;
+		max-width: 10rem;
 		z-index: $z-index-content;
 	}
 
@@ -25,5 +25,75 @@
 
 	.c-breed-search {
 		margin-top: 1.5rem;
+	}
+
+	@include media(xsmall) {
+		padding: map-get($gutters, xsmall);
+
+		&__content {
+			max-width: 13rem;
+			z-index: $z-index-content;
+		}
+	}
+
+	@include media(small) {
+		min-height: 24rem;
+		padding: map-get($gutters, small);
+
+		&__heading {
+			font-size: 3rem;
+		}
+
+		&__content {
+			max-width: 15rem;
+			z-index: $z-index-content;
+		}
+
+		.c-breed-search {
+			margin-top: 2rem;
+		}
+	}
+
+	@include media(medium) {
+		padding: map-get($gutters, medium);
+
+		&__heading {
+			font-size: 4.5rem;
+			position: relative;
+			left: -0.3rem;
+		}
+
+		&__excerpt {
+			max-width: 12rem;
+		}
+
+		&__content {
+			max-width: 19rem;
+		}
+
+		.c-breed-search {
+			margin-top: 2.4rem;
+		}
+	}
+
+	@include media(large) {
+		padding: map-get($gutters, large);
+
+		&__heading {
+			font-size: 6rem;
+			left: -0.6rem;
+		}
+
+		&__excerpt {
+			max-width: 15rem;
+		}
+
+		&__content {
+			max-width: 20rem;
+		}
+
+		.c-breed-search {
+			margin-top: 3rem;
+		}
 	}
 }

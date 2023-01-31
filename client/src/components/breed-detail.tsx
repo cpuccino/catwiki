@@ -39,13 +39,16 @@ const BreedDetail: FC<Props> = props => {
 					const value = traits[key as keyof typeof traits];
 
 					return (
-						<div className="c-breed-detail__trait">
+						<div key={traitLabel} className="c-breed-detail__trait">
 							<h4 className="c-breed-detail__label">{traitLabel}:</h4>
 							<div className="c-breed-detail__bars">
 								{Array(5)
 									.fill(null)
 									.map((_, idx) => (
-										<div className={`c-breed-detail__bar ${idx <= value ? "is-filled" : ""}`} />
+										<div
+											className={`c-breed-detail__bar ${idx <= value ? "is-filled" : ""}`}
+											key={idx}
+										/>
 									))}
 							</div>
 						</div>

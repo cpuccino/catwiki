@@ -1,6 +1,22 @@
 .c-header {
-	padding: 2rem map-get($gutters, xxsmall) 1rem;
+	padding: 2rem map-get($gutters, xxsmall) 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@include media(xsmall) {
+		padding: 2rem map-get($gutters, xsmall) 1.5rem;
+	}
+
+	@include media(small) {
+		padding: 2rem map-get($gutters, small);
+	}
+
+	@include media(medium) {
+		padding: 2.5rem map-get($gutters, medium) 3rem;
+	}
+
+	@include media(large) {
+		padding: 3rem map-get($gutters, large) 4rem;
+	}
 }

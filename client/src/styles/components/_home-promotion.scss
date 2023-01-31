@@ -10,6 +10,11 @@
 		margin-bottom: 2rem;
 	}
 
+	&__right {
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
 	&__read-more:after {
 		background: $color-red;
 	}
@@ -31,5 +36,45 @@
 
 	&__excerpt {
 		margin-bottom: 1.5rem;
+	}
+
+	@include media(xsmall) {
+		padding: 4rem map-get($gutters, xsmall);
+	}
+
+	@include media(small) {
+		padding: 5rem map-get($gutters, small);
+
+		&__title {
+			max-width: 20rem;
+		}
+	}
+
+	@include media(medium) {
+		flex-direction: row;
+		align-items: center;
+		padding: 5rem map-get($gutters, medium);
+
+		&__left {
+			width: 50%;
+			margin-bottom: 0;
+			margin-right: 5rem;
+		}
+
+		&__right {
+			width: 50%;
+		}
+	}
+
+	@include media(large) {
+		padding: 9rem map-get($gutters, large);
+
+		&__excerpt {
+			max-width: 25rem;
+		}
+
+		&__right {
+			border-radius: 1.5rem;
+		}
 	}
 }

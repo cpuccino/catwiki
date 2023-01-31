@@ -55,12 +55,12 @@ CATWIKI_API_KEY=api_key
   - [ ] Loader
   - [x] Header
   - [x] Footer
-  - [ ] Responsiveness
-    - [x] base
-    - [ ] xsmall
-    - [ ] medium
-    - [ ] large
-    - [ ] xlarge
+  - [x] Responsiveness
+    - [x] base (mobile)
+    - [x] xsmall (mobile)
+    - [x] medium (tablet)
+    - [x] large (desktop)
+    - [x] xlarge (desktop)
   - [ ] Replace mocks with real api calls
   - [ ] Deployment
     - [x] Container

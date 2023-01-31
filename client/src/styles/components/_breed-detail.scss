@@ -7,10 +7,16 @@
 		margin-bottom: 1.5rem;
 	}
 
+	&__right {
+		max-width: 25rem;
+	}
+
 	&__breed-img {
 		overflow: hidden;
 		border-radius: 0.625rem;
 		max-height: 18rem;
+
+		aspect-ratio: 1/1;
 	}
 
 	&__name,
@@ -44,6 +50,96 @@
 
 		&.is-filled {
 			background: $color-red;
+		}
+	}
+
+	@include media(xsmall) {
+		padding: 0 map-get($gutters, xsmall);
+	}
+
+	@include media(small) {
+		padding: 0 map-get($gutters, small);
+		flex-direction: row;
+		justify-content: space-between;
+
+		&__description {
+			margin-bottom: 1.5rem;
+		}
+
+		&__left {
+			width: 40%;
+			margin-bottom: 0;
+		}
+
+		&__right {
+			width: 55%;
+			max-width: unset;
+		}
+
+		&__breed-img {
+			max-height: unset;
+		}
+
+		&__info,
+		&__trait {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__value {
+			width: 50%;
+		}
+
+		&__value,
+		&__bars {
+			width: 50%;
+			max-width: 20rem;
+			align-items: center;
+			margin-left: 1rem;
+		}
+
+		&__label {
+			margin-bottom: 0rem;
+		}
+	}
+
+	@include media(medium) {
+		padding: 0 map-get($gutters, medium);
+
+		&__right {
+			width: 50%;
+		}
+	}
+
+	@include media(large) {
+		padding: 0 map-get($gutters, large);
+
+		&__description {
+			margin-bottom: 2rem;
+		}
+
+		&__left {
+			width: 35%;
+		}
+
+		&__right {
+			width: 55%;
+		}
+
+		&__bar {
+			height: 0.6rem;
+			margin-right: 0.5rem;
+			border-radius: 0.3rem;
+		}
+
+		&__value,
+		&__bars {
+			width: 55%;
+		}
+
+		&__info,
+		&__trait {
+			margin-bottom: 1.5rem;
 		}
 	}
 }

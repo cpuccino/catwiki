@@ -3,8 +3,7 @@
 
 	&__input {
 		border: none;
-		padding: 0.5rem 0.7rem;
-		padding-right: 1.5rem;
+		padding: 0.5rem 1.5rem 0.5rem 0.9rem;
 		border-radius: 5rem;
 		width: 100%;
 	}
@@ -35,7 +34,6 @@
 		&-item,
 		&-empty {
 			color: $color-black;
-			padding: 0.5rem 0.7rem;
 		}
 
 		&-empty {
@@ -45,11 +43,40 @@
 
 		&-item {
 			cursor: pointer;
+			padding: 0.5rem 0.7rem;
 
 			&:hover {
 				background: $color-red;
 				color: $color-white;
 			}
+		}
+	}
+
+	@include media(small) {
+		&__input {
+			padding: 0.8rem 2.3rem 0.8rem 1.3rem;
+		}
+
+		&__empty {
+			padding: 0.9rem 0.8rem 0.9rem 0rem;
+		}
+
+		&__popup {
+			top: 3.3rem;
+			border-radius: 1rem;
+			padding: 0.8rem 0;
+
+			&-item {
+				padding: 0.5rem 1.3rem;
+			}
+		}
+	}
+
+	@include media(large) {
+		&__popup {
+			top: 3.6rem;
+			max-height: 20rem;
+			border-radius: 1.3rem;
 		}
 	}
 }

@@ -1,10 +1,6 @@
 .c-logo {
 	display: flex;
 
-	&:after {
-		content: none;
-	}
-
 	span {
 		font-size: 1rem;
 		font-family: $font-logo;
@@ -13,5 +9,33 @@
 
 	svg {
 		transform: rotate(10deg);
+	}
+
+	&:after {
+		content: none;
+	}
+
+	@include media(medium) {
+		span {
+			font-size: 1.5rem;
+			margin-right: 0.5rem;
+		}
+
+		svg {
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+	}
+
+	@include media(large) {
+		span {
+			font-size: 1.8rem;
+			margin-right: 0.8rem;
+		}
+
+		svg {
+			height: 1.8rem;
+			width: 1.8rem;
+		}
 	}
 }
