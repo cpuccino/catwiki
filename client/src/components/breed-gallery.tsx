@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { CatImage } from "src/api/catwiki";
+import { CatImage } from "../api/catwiki";
 
 type Props = {
 	breedImages: CatImage[];

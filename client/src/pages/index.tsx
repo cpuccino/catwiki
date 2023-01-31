@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { FC } from "react";
 
-import HomeBanner from "src/components/home-banner";
-import HomeDiscover from "src/components/home-discover";
-import HomePromotion from "src/components/home-promotion";
-import Footer from "src/components/footer";
+import HomeBanner from "../components/home-banner";
+import HomeDiscover from "../components/home-discover";
+import HomePromotion from "../components/home-promotion";
+import Footer from "../components/footer";
 
 const Index: FC = () => (
 	<div>

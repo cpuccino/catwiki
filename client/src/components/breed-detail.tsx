@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { CatBreed } from "src/api/catwiki";
+import { CatBreed } from "../api/catwiki";
 
 type Props = {
 	breed: CatBreed;

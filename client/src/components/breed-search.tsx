@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FC, useState } from "react";
-
 import { FaTimes } from "react-icons/fa";
-import { CatBreed } from "src/api/catwiki";
-import { catBreedMock } from "src/mock/cat-breed";
+
+import { CatBreed } from "../api/catwiki";
+import { catBreedMock } from "../mock/cat-breed";
 
 const BreedSearch: FC = () => {
 	const [value, setValue] = useState("");
