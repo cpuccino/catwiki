@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 
-const HomePromotion: FC = () => {
-	return (
+const HomePromotion: FC = () => (
 		<div className="c-home-promotion">
 			<div className="c-home-promotion__left">
 				<h2 className="c-home-promotion__title is-size-1">Why should you have a cat?</h2>
@@ -19,6 +18,5 @@ const HomePromotion: FC = () => {
 			</div>
 		</div>
 	);
-};
 
 export default HomePromotion;

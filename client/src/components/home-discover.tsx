@@ -5,8 +5,7 @@ import { catBreedMock } from "../mock/cat-breed";
 
 const MAX_IMAGE_COUNT = 4;
 
-const HomeDiscover: FC = () => {
-	return (
+const HomeDiscover: FC = () => (
 		<div className="c-home-discover">
 			<span className="c-home-discover__heading">Most searched breeds</span>
 			<div className="c-home-discover__excerpt">
@@ -27,6 +26,5 @@ const HomeDiscover: FC = () => {
 			</div>
 		</div>
 	);
-};
 
 export default HomeDiscover;

@@ -45,7 +45,7 @@ const BreedDetail: FC<Props> = props => {
 								{Array(5)
 									.fill(null)
 									.map((_, idx) => (
-										<div className={`c-breed-detail__bar ${idx <= value ? "is-filled" : ""}`}></div>
+										<div className={`c-breed-detail__bar ${idx <= value ? "is-filled" : ""}`} />
 									))}
 							</div>
 						</div>

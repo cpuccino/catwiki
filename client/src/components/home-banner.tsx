@@ -2,8 +2,7 @@ import { FC } from "react";
 
 import BreedSearch from "./breed-search";
 
-const HomeBanner: FC = () => {
-	return (
+const HomeBanner: FC = () => (
 		<div className="c-home-banner">
 			<img
 				className="c-home-banner__background"
@@ -16,6 +15,5 @@ const HomeBanner: FC = () => {
 			</div>
 		</div>
 	);
-};
 
 export default HomeBanner;

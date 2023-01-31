@@ -6,8 +6,7 @@ import HomeDiscover from "src/components/home-discover";
 import HomePromotion from "src/components/home-promotion";
 import Footer from "src/components/footer";
 
-const Index: FC = () => {
-	return (
+const Index: FC = () => (
 		<div>
 			<Head>
 				<title>Home</title>
@@ -18,6 +17,5 @@ const Index: FC = () => {
 			<Footer />
 		</div>
 	);
-};
 
 export default Index;
