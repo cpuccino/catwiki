@@ -18,7 +18,7 @@ const BreedSearch: FC = () => {
 	};
 
 	const handleOnBreedClick = (breedId: string) => {
-		router.push(`/breeds/${breedId}`);
+		return router.push(`/breeds/${breedId}`);
 	};
 
 	const renderPopup = (breeds: CatBreed[]) => {

@@ -15,40 +15,52 @@ const Breed: FC = () => {
 	const router = useRouter();
 	const { id } = router.query;
 
+	const findAlternativeImage = (catBreed: CatBreed, catImages: CatImage[]): string | undefined => {
+		if (catBreed.image) {
+			return catBreed.image;
+		}
+
+		if (!catImages.length) {
+			return;
+		}
+
+		const referenceImage = catImages.find(image => image.id === catBreed.referenceImageId)?.url;
+		if (referenceImage) {
+			return referenceImage;
+		}
+
+		return catImages[0].url;
+	};
+
 	const fetchBreed = useCallback(async () => {
 		if (!id) {
 			return;
 		}
 
 		try {
-			const data = await getBreed(id as string);
-			console.log(data);
-			if (data) setBreed(data);
+			const [fetchedBreed, fetchedBreedImages] = await Promise.all([
+				getBreed(id as string),
+				getBreedImages(id as string)
+			]);
+
+			if (!fetchedBreed) {
+				console.log(`Invalid breed "${id}".`);
+				return router.push("/");
+			}
+
+			fetchedBreed.image = findAlternativeImage(fetchedBreed, fetchedBreedImages);
+
+			setBreed(fetchedBreed);
+			setImages(fetchedBreedImages);
 		} catch (error) {
 			console.log(`Cannot fetch breed data for "${id}."`);
 			router.push("/");
 		}
 	}, [id]);
 
-	const fetchImages = useCallback(async () => {
-		if (!id) {
-			return;
-		}
-
-		try {
-			const data = await getBreedImages(id as string);
-			console.log(data);
-			if (data) setImages(data);
-		} catch (error) {
-			console.log(`Cannot fetch breed images for "${id}".`);
-			router.push("/");
-		}
-	}, [id]);
-
 	useEffect(() => {
 		fetchBreed();
-		fetchImages();
-	}, [fetchBreed, fetchImages]);
+	}, [fetchBreed]);
 
 	return (
 		<div>

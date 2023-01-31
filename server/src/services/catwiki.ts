@@ -68,7 +68,8 @@ export class CatWikiService {
 			health_issues,
 			social_needs,
 			stranger_friendly,
-			image
+			image,
+			reference_image_id
 		} = response;
 
 		return {
@@ -88,7 +89,8 @@ export class CatWikiService {
 				socialNeeds: social_needs,
 				strangerFriendly: stranger_friendly
 			},
-			image: image?.url
+			image: image?.url,
+			referenceImageId: reference_image_id
 		};
 	};
 }
@@ -171,6 +173,7 @@ export type CatBreed = {
 		socialNeeds: number;
 		strangerFriendly: number;
 	};
+	referenceImageId?: string;
 	image?: string;
 };
 

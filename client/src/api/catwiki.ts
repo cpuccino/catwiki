@@ -17,6 +17,7 @@ export type CatBreed = {
 		socialNeeds: number;
 		strangerFriendly: number;
 	};
+	referenceImageId?: string;
 	image?: string;
 };
 
