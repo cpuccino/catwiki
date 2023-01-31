@@ -1340,3 +1340,30 @@ export const catBreedMock = [
 		image: "https://cdn2.thecatapi.com/images/0SxW2SQ_S.jpg"
 	}
 ];
+
+export const catImagesMock = [
+	{
+		id: "SCHe-SekW",
+		url: "https://cdn2.thecatapi.com/images/SCHe-SekW.jpg",
+		breedId: "asho",
+		breedName: "American Shorthair"
+	},
+	{
+		id: "8NdgktL3E",
+		url: "https://cdn2.thecatapi.com/images/8NdgktL3E.jpg",
+		breedId: "asho",
+		breedName: "American Shorthair"
+	},
+	{
+		id: "MuEGe1-Sz",
+		url: "https://cdn2.thecatapi.com/images/MuEGe1-Sz.jpg",
+		breedId: "asho",
+		breedName: "American Shorthair"
+	},
+	{
+		id: "JFPROfGtQ",
+		url: "https://cdn2.thecatapi.com/images/JFPROfGtQ.jpg",
+		breedId: "asho",
+		breedName: "American Shorthair"
+	}
+];
