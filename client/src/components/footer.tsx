@@ -1,9 +1,10 @@
 import { FC } from "react";
+import Logo from "./logo";
 
 const Footer: FC = () => {
 	return (
 		<div className="c-footer">
-			<h3 className="is-logo">CatWiki</h3>
+			<Logo />
 			<p>© 2023 - built by cpuccino</p>
 		</div>
 	);

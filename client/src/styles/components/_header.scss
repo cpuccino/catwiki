@@ -1,0 +1,6 @@
+.c-header {
+	padding: 2rem map-get($gutters, xxsmall) 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

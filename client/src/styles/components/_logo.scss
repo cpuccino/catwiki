@@ -1,0 +1,17 @@
+.c-logo {
+	display: flex;
+
+	&:after {
+		content: none;
+	}
+
+	span {
+		font-size: 1rem;
+		font-family: $font-logo;
+		margin-right: 0.3rem;
+	}
+
+	svg {
+		transform: rotate(10deg);
+	}
+}
