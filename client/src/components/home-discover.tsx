@@ -3,6 +3,8 @@ import { FC } from "react";
 
 import { catBreedMock } from "../mock/cat-breed";
 
+const MAX_IMAGE_COUNT = 4;
+
 const HomeDiscover: FC = () => {
 	return (
 		<div className="c-home-discover">
@@ -14,7 +16,7 @@ const HomeDiscover: FC = () => {
 				</Link>
 			</div>
 			<div className="c-home-discover__exhibition">
-				{catBreedMock.slice(0, 4).map(breed => (
+				{catBreedMock.slice(0, MAX_IMAGE_COUNT).map(breed => (
 					<div className="c-home-discover__breed" key={breed.id}>
 						<div className="c-home-discover__breed-image">
 							<img src={breed.image} alt={breed.name} />
