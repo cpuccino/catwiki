@@ -12,8 +12,8 @@ const Index: FC = () => {
 
 	const fetchBreeds = async () => {
 		try {
-			const breeds = await getBreeds();
-			setBreeds(breeds);
+			const fetchedBreeds = await getBreeds();
+			setBreeds(fetchedBreeds);
 		} catch (error) {
 			console.log("Cannot fetch breeds");
 		}

@@ -30,15 +30,15 @@ export type CatImage = {
 
 export const getBreeds = async (): Promise<CatBreed[]> => {
 	const url = `${getApiUrl()}/breeds`;
-	return await fetch(url).then(res => res.json());
+	return fetch(url).then(res => res.json());
 };
 
 export const getBreed = async (breedId: string): Promise<CatBreed | null> => {
 	const url = `${getApiUrl()}/breeds/${breedId}`;
-	return await fetch(url).then(res => res.json());
+	return fetch(url).then(res => res.json());
 };
 
 export const getBreedImages = async (breedId?: string): Promise<CatImage[]> => {
 	const url = `${getApiUrl()}/images${breedId ? `?breeds=${breedId}` : ""}`;
-	return await fetch(url).then(res => res.json());
+	return fetch(url).then(res => res.json());
 };

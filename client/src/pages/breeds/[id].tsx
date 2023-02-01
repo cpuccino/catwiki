@@ -6,6 +6,7 @@ import BreedDetail from "../../components/breed-detail";
 import BreedGallery from "../../components/breed-gallery";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import PageLoader from "../../components/page-loader";
 import { CatBreed, CatImage, getBreed, getBreedImages } from "../../api/catwiki";
 
 const Breed: FC = () => {
@@ -21,7 +22,7 @@ const Breed: FC = () => {
 		}
 
 		if (!catImages.length) {
-			return;
+			return undefined;
 		}
 
 		const referenceImage = catImages.find(image => image.id === catBreed.referenceImageId)?.url;
@@ -45,7 +46,8 @@ const Breed: FC = () => {
 
 			if (!fetchedBreed) {
 				console.log(`Invalid breed "${id}".`);
-				return router.push("/");
+				router.push("/");
+				return;
 			}
 
 			fetchedBreed.image = findAlternativeImage(fetchedBreed, fetchedBreedImages);
@@ -67,14 +69,16 @@ const Breed: FC = () => {
 			<Head>
 				<title>Breed</title>
 			</Head>
-			<Header />
-			{breed && (
+			{breed ? (
 				<>
+					<Header />
 					<BreedDetail breed={breed} />
 					<BreedGallery breedImages={images} />
+					<Footer />
 				</>
+			) : (
+				<PageLoader />
 			)}
-			<Footer />
 		</div>
 	);
 };

@@ -25,7 +25,9 @@
 						"namedComponents": "arrow-function",
 						"unnamedComponents": "arrow-function"
 					}
-				]
+				],
+				"react-hooks/exhaustive-deps": "warn",
+				"react/no-array-index-key": "warn"
 			}
 		},
 		{

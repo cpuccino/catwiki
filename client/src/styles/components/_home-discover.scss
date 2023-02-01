@@ -76,6 +76,7 @@
 	@include media(41.875rem) {
 		&__exhibition {
 			flex-flow: wrap;
+			overflow-y: hidden;
 		}
 
 		&__breed {

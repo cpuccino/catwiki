@@ -58,7 +58,7 @@ CATWIKI_API_KEY=api_key
     - [x] Info - fetch breed data
     - [x] Gallery - fetch breed images
   - [ ] 404 Page
-  - [ ] Loader
+  - [x] Loader
   - [x] Header
   - [x] Footer
   - [x] Responsiveness

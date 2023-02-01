@@ -23,23 +23,23 @@ const BreedSearch: FC<Props> = props => {
 	};
 
 	const handleOnBreedClick = (breedId: string) => {
-		return router.push(`/breeds/${breedId}`);
+		router.push(`/breeds/${breedId}`);
 	};
 
-	const renderPopup = (breeds: CatBreed[]) => {
-		const matches = breeds.filter(breed => breed.name.toLowerCase().includes(value.toLowerCase()));
+	const renderPopup = (items: CatBreed[]) => {
+		const matches = items.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
 
 		if (!matches.length) {
 			return <div className="c-breed-search__popup-empty is-size-4">No results found</div>;
 		}
 
-		return matches.map(breed => (
+		return matches.map(item => (
 			<div
-				key={breed.name}
+				key={item.name}
 				className="c-breed-search__popup-item is-size-4"
-				onClick={() => handleOnBreedClick(breed.id)}
+				onClick={() => handleOnBreedClick(item.id)}
 			>
-				{breed.name}
+				{item.name}
 			</div>
 		));
 	};
